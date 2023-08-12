@@ -18,31 +18,14 @@ class HomeDesktop extends StatelessWidget {
       padding: Space.h,
       child: Stack(
         children: [
-          Positioned(
-            bottom: 0,
-            right: 0,
-            child: Opacity(
-              opacity: 0.9,
-              child: EntranceFader(
-                offset: const Offset(0, 0),
-                delay: const Duration(seconds: 1),
-                duration: const Duration(milliseconds: 800),
-                child: Image.asset(
-                  StaticUtils.blackWhitePhoto,
-                  height: size.width < 1200
-                      ? size.height * 0.8
-                      : size.height * 0.85,
-                ),
-              ),
-            ),
-          ),
           Container(
-            margin: EdgeInsets.fromLTRB(
-              AppDimensions.normalize(30),
-              AppDimensions.normalize(80),
-              0,
-              0,
-            ),
+            // margin: EdgeInsets.fromLTRB(
+            //   AppDimensions.normalize(30),
+            //   AppDimensions.normalize(80),
+            //   0,
+            //   0,
+            // ),
+            color: const Color(0xFFeaeaea),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -50,7 +33,7 @@ class HomeDesktop extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'WELCOME TO MY PORTFOLIO! ',
+                      'WELCOME TO MY KNOWLEDGE LIBRARY',
                       style: AppText.b1!.copyWith(
                         fontFamily: 'Montserrat',
                       ),
@@ -68,17 +51,18 @@ class HomeDesktop extends StatelessWidget {
                 ),
                 Space.y1!,
                 Text(
-                  "Muhammad",
+                  "Tech Writer",
                   style: AppText.h1!.copyWith(
-                    fontFamily: 'Montserrat',
+                    // fontFamily: 'Montserrat',
                     fontSize: AppDimensions.normalize(25),
-                    fontWeight: FontWeight.w100,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
                 Text(
-                  "Hamza",
+                  "Tips & Tricks",
                   style: AppText.h1b!.copyWith(
                     fontSize: AppDimensions.normalize(25),
+                    fontWeight: FontWeight.w300,
                     height: 1,
                   ),
                 ),
@@ -95,17 +79,17 @@ class HomeDesktop extends StatelessWidget {
                       AnimatedTextKit(
                         animatedTexts: [
                           TyperAnimatedText(
-                            ' Flutter Developer',
+                            ' Content Developer',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' UI/UX Enthusiast',
+                            ' Digital Manual Enthusiast',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' A friend :)',
+                            ' A Friend for Tech Writers',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
@@ -118,6 +102,24 @@ class HomeDesktop extends StatelessWidget {
                 Space.y2!,
                 const SocialLinks(),
               ],
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            right: 0,
+            child: Opacity(
+              opacity: 0.9,
+              child: EntranceFader(
+                offset: const Offset(0, 0),
+                delay: const Duration(seconds: 1),
+                duration: const Duration(milliseconds: 800),
+                child: Image.asset(
+                  StaticUtils.blackWhitePhoto,
+                  height: size.width < 1200
+                      ? size.height * 0.8
+                      : size.height * 0.85,
+                ),
+              ),
             ),
           ),
         ],
